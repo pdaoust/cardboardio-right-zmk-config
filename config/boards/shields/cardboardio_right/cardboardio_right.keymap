@@ -84,7 +84,7 @@
               &trans        &kp  PG_UP    &trans        &trans        &trans        &kp  F12
               &kp  HOME     &kp  LEFT     &kp  UP       &kp  RIGHT    &trans        &trans
 &trans        &trans        &kp  PG_DN    &kp  DOWN     &trans        &trans        &trans
-&trans        &trans        &trans        &tog LAYER_FUNC_ARR         &trans        &trans     &trans
+&trans        &trans        &trans        &trans        &trans        &trans     &trans
                         >;
 
                 };
