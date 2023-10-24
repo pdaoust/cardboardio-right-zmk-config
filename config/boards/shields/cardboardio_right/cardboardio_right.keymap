@@ -41,7 +41,7 @@
  *             |------+------+------+------+------+------+
  * +------+    |   N  |   M  |   ,  |   .  |   /  |   \  |
  * | ⌫/Alt|    +------+------+------+------+------+------+
- * +------+------+------+           |PrtScn|   [  |   ]  |  
+ * +------+------+------+           |PrtScn|   [  |   ]  |
  * | ↵/Ctl|  ␣/⇧ |      |           +------+------+------+
  * +------+------+------+
  *                           +------+
@@ -53,7 +53,7 @@
               &kp  Y        &kp  U        &kp  I        &kp  O        &kp  P        &kp  EQUAL
               &kp  H        &kp  J        &kp  K        &kp  L        &kp  SEMI     &kp  APOS
 &mt RALT BSPC &kp  N        &kp  M        &kp  COMMA    &kp  PERIOD   &kp  SLASH    &kp  BACKSLASH
-&mt RCTRL RET &mt LSHIFT SPACE &none      PALM(LAYER_FUNC_ARR)         &kp  PSCRN     &kp  LBKT     &kp  RBKT
+&mt RCTRL RET &mt LSHIFT SPACE &none      PALM(LAYER_FUNC_ARR)        &kp  PSCRN    &kp  LBKT     &kp  RBKT
                         >;
 
                         sensor-bindings = <
@@ -72,7 +72,7 @@
  *             |------+------+------+------+------+------+
  * +------+    |      | PgDn |   v  |      |      |      |
  * |      |    +------+------+------+------+------+------+
- * +------+------+------+           |      |      |      |  
+ * +------+------+------+           |      |      |      |
  * |      |      |      |           +------+------+------+
  * +------+------+------+
  *                           +------+
@@ -81,10 +81,14 @@
  */
                         bindings = <
               &kp  F6       &kp  F7       &kp  F8       &kp  F9       &kp  F10      &kp  F11
-              &trans        &kp  PG_UP    &trans        &trans        &trans        &kp  F12
-              &kp  HOME     &kp  LEFT     &kp  UP       &kp  RIGHT    &trans        &trans
-&trans        &trans        &kp  PG_DN    &kp  DOWN     &trans        &trans        &trans
-&trans        &trans        &trans        &trans        &trans        &trans     &trans
+              &none         &kp  PG_UP    &none         &none         &none         &kp  F12
+              &kp  HOME     &kp  LEFT     &kp  UP       &kp  RIGHT    &kp END       &none
+&trans        &none         &kp  PG_DN    &kp  DOWN     &none         &none         &none
+&trans        &trans        &trans        &trans        &trans        &none         &none
+                        >;
+
+                        sensor-bindings = <
+                                &inc_dec_kp BSPC DEL
                         >;
 
                 };
